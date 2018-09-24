@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Complete Tax Debt</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+    <!-- font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; -->
+    
+    <link href="css/animate.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="imgs/160x160-TAXDebt.jpg" type="image/ico" sizes="16x16">
+    </head>
+</head>
+<body>
+    <!-- Header -->
+    <div id="bgColor">
+        <header id="main-header">
+            <div class="container-margin">
+                <div class="container-content"> 
+                    <div id="logoLeft">
+                        <img src="./imgs/logo.png" class="logoImg" alt="">
+                    </div>
+                    <div id="numberRight">
+                        <span>1-888-873-3681</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- Image and multi step Form -->
+    <div id="bgImg">
+        <form id="regForm" action="">
+        
+            <h2>Solve Your Tax Debt Problems</h2>
+        
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab title">How much tax debt do you have?
+                <br>
+                <select id="select-debt" class="select-dropdown" onselect="this.className = ''">
+                    <option value="" selected hidden>Please Select</option>
+                    <option value="5000">$0 - $9,999</option>
+                    <option value="15000">$10,000 - $19,999</option>
+                    <option value="35000">$20,000 - $49,999</option>
+                    <option value="50000">$50,000 + </option>
+                </select>
+            </div>
+        
+            <div class="tab title" >What type of taxes do you have?
+                <br>
+                <select id="select-type" class="select-dropdown" onselect="this.className = ''">
+                    <option value="" selected hidden>Please Select</option>
+                    <option value="state">State Taxes</option>
+                    <option value="federal">Federal Taxes</option>
+                    <option value="state-federal">State &amp; Federal Taxes</option>
+                </select>
+            </div>
+        
+            <div class="tab title">What is your filing status?
+                <br>
+                <select id="select-type" class="select-dropdown" onselect="this.className = ''">
+                    <option value="" selected hidden>Please Select</option>
+                    <option value="filed">Filed</option>
+                    <option value="not-filed">Not Filed</option>
+                </select>
+            </div>
+        
+            <div class="tab title">Complete the form and get your FREE estimate
+                <p><input placeholder="Full Name" oninput="this.className = ''"></p>
+                <p><input placeholder="Email" oninput="this.className = ''"></p>
+                <p><input placeholder="Phone" oninput="this.className = ''"></p>
+                <p><input placeholder="Zip Code" oninput="this.className = ''"></p>
+                <p id="disclaimer">
+                    By clicking the "Submit" button, you agree to our Privacy Policy and authorize Complete Tax Debt and its
+                    partners to contact you at the phone number you provided using automated technology including auto-dialers,
+                    pre-recorded messages and text messages, even if your phone is a mobile number or is listed on any state, federal or
+                    corporate "Do Not Call" lists, and you are not required to give your consent as a condition of service.
+                </p>
+                <img src="./imgs/secure-logos.png" alt="secure Logos">
+            </div>
+        
+            <div style="overflow:auto;">
+                <div style="float:right;" class="nextPrevBtn">
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>
+        
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+        
+        </form>
+    </div>
+    <!-- Three Steps Section -->
+    <div class="bgColor2">
+        <div class="container-margin">
+            <h2 id="threeStepTitle">TAX RELIEF IN 3 EASY STEPS!</h2>
+            <div  id="threeSteps">
+                <div class="sec-box">
+                    <p><span class="num">1.</span><br> Complete the Secure Application Above</p>
+                </div>
+                <div class="sec-box">
+                    <p><span class="num">2.</span><br> Get a 100% FREE, No Obligation Consultation with an IRS Tax Debt Expert</p>
+                </div>
+                <div class="sec-box">
+                    <p><span class="num">3.</span><br> Resolution of your
+                    Tax Debt, placing you back on path to IRS compliance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Img and text sections -->
+    <div class="bgColor2" id="imgTxtSection">
+        <div class="container-margin">
+            <div id="twoImg">
+                <div class="sec-img-txt">
+                    <img src="./imgs/icon-1.png" alt="FREE CONSULTATION Image">
+                    <span>
+                        <h3>FREE CONSULTATION</h3>
+                        One of our IRS Tax Debt experts will call you to get the details of your situation for FREE. Most lawyers charge for
+                        calls, but not Complete Tax Debt.
+                    </span>
+                </div>
+                <div class="sec-img-txt">
+                    <img src="./imgs/icon-2.png" alt="NO OBLIGATION Image">   
+                    <span>
+                        <h3>NO OBLIGATION</h3>
+                        One of our IRS Tax Debt experts will call you to get the details of your situation for FREE. Most lawyers charge for
+                        calls, but not Complete Tax Debt.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
