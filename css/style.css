@@ -14,7 +14,6 @@ body {
 }
 /* ========== Start Header section ========== */ 
 #main-header {
-    /* background: #fff; */
     padding: 0.85em 0;
 }
 #bgColor{
@@ -229,7 +228,13 @@ button:hover {
     
 }
 /* ========== END of two img and txt Sections ========== */
-
+/* Footer Styles */
+footer a{
+    color: #2c3d50;
+}
+footer a:hover{
+    color: #CE2A00;
+}
 /*
 ####################################################
 M E D I A  Q U E R I E S
