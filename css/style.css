@@ -58,7 +58,7 @@ body {
   font-family: 'Roboto', sans-serif;
   padding: 40px;
   width: 50%;
-  min-width: 240px;
+  min-width: 225px;
   max-width:600px;
 }
 
@@ -79,7 +79,13 @@ h2 {
 .select-dropdown{
     padding: 8px;
     margin-top:10px;
-    border-radius: 10px;
+    border-radius: 7px;
+    border:2px solid gray;
+    font-size:18px;
+    font-family: 'Roboto', sans-serif;
+}
+input{
+    border-radius: 7px;
     border:2px solid gray;
     font-size:18px;
     font-family: 'Roboto', sans-serif;
@@ -132,6 +138,10 @@ button:hover {
     color: rgb(240, 240, 240);
     text-align:left;
     font-weight: normal;
+}
+
+#secure-logos{
+    width:100%;
 }
 
 
@@ -199,7 +209,7 @@ button:hover {
    
 }
 .sec-img-txt span{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .sec-img-txt span h3{
@@ -308,7 +318,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 @media (min-width: 992px) { 
     /* Form Styles */
     #regForm {
-        margin: 100px auto;
+        margin: 80px auto;
     }
    
 
@@ -331,16 +341,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
  
  
- 
-/*
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-Custom media queries
-*/
- 
-/* Set width to make card deck cards 100% width */
-@media (max-width: 950px) { 
-
-}
 
 
 

@@ -26,7 +26,9 @@ function nextPrev(n) {
     // This function will figure out which tab to display
     var x = document.getElementsByClassName("tab");
     // Exit the function if any field in the current tab is invalid:
-    if (n == 1 && !validateForm()) return false;
+    if (n == 1 && !validateForm()){
+        return false; 
+    }
     // Hide the current tab:
     // fades in the text for prev 
     x[currentTab].classList.add('animated','fadeIn');
@@ -58,23 +60,47 @@ function validateForm() {
         if (y[i].value == "") {
             // add an "invalid" class to the field:
             y[i].className += " invalid";
+            y[i].classList.add('invalid', 'animated', 'shake');
             // and set the current valid status to false:
             valid = false;
-            
         }
+    }
+    // removes class when user clicks back on dropdown 
+    var selectDebt = document.getElementById('select-debt');
+    var selectType = document.getElementById('select-type');
+    var selectStatus = document.getElementById('select-status');
+    selectDebt.onclick = function () {
+        console.log("button was clicked");
+        selectDebt.classList.remove('invalid', 'animated', 'shake');
+    }
+    selectType.onclick = function () {
+        console.log("button was clicked");
+        selectType.classList.remove('invalid', 'animated', 'shake');
+    }
+    selectStatus.onclick = function () {
+        console.log("button was clicked");
+        selectStatus.classList.remove('invalid', 'animated', 'shake');
     }
     /* Checks for select */
     for (i = 0; i < w.length; i++ ){
         if (w[i].value == "") {
+            console.log('1');
             // add an "invalid" class to the field:
-            w[i].className += " invalid";
+            w[i].classList.add('invalid', 'animated', 'shake');
             // and set the current valid status to false:
             valid = false;
+        } 
+        else {
+            // removes error color and shank if previous value is not empty
+            w[i].classList.remove('invalid', 'animated', 'shake');
         }
     }
+    /* w[i].classList.remove('invalid', 'animated', 'shake'); */
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
         document.getElementsByClassName("step")[currentTab].className += " finish";
+
+
     }
     return valid; // return the valid status
 }
