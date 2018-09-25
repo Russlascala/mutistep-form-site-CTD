@@ -14,7 +14,7 @@ body {
 }
 /* ========== Start Header section ========== */ 
 #main-header {
-    padding: 0.85em 0;
+   padding: 5px 0;
 }
 .bgColor{
     background: lightgray;
@@ -29,18 +29,27 @@ body {
     display: flex;
     justify-content: center;
 }
-#numberRight span{
-    font-size: 18px;
+#whole-num{
+    text-align:center;
+    font-size:20px;
     font-weight: bold;
+}
+#text-top{
+    font-weight: normal;
+    font-size: 15px;
+}
+
+#whole-num{
     color: white;
     background: #CE2A00;
-    padding:10px 15px;
-    border-radius: 30px;
+    padding:5px 10px;
+    border-radius: 8px;
 }
-#numberRight span:hover{
+#whole-num:hover{
     cursor: pointer;
     background-color: #2c3d50;
 }
+
 /* ========== END Header section ========== */ 
 /* ========== START  Image and multi step Form section ========== */ 
 #bgImg{
@@ -53,7 +62,7 @@ body {
 /* Style the form */
 #regForm {
   background-color: #ffffff00;
-  margin: 100px auto;
+  /* margin: 100px auto; */
   font-family: 'Roboto', sans-serif;
   padding: 40px;
   width: 50%;
@@ -64,13 +73,13 @@ body {
 h2 {
     text-align: center; 
     color:#fff;
-    font-size:30px; 
-    text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    font-size:35px; 
+    /* text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0); */
 }
 
 .title{
     text-align: center;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
     color:white;
     text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
@@ -120,18 +129,22 @@ button {
   font-size: 17px;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
+  /* text-align: center; */
 }
 
 button:hover {
-  opacity: 0.8;
+    opacity: 0.9;
+     -webkit-box-shadow: 0px -1px 40px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 40px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 40px -4px rgba(0,0,0,0.75);
 }
 
 #prevBtn {
-  background-color: #bbbbbb;
+  background-color: #8f8f8f;
 }
 
 #disclaimer{
-    font-size: 12px;
+    font-size: 13px;
     color: rgb(240, 240, 240);
     text-align:left;
     font-weight: normal;
@@ -147,7 +160,7 @@ button:hover {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbbbbb;
+  background-color: #8f8f8f;
   border: none;  
   border-radius: 50%;
   display: inline-block;
@@ -169,21 +182,20 @@ button:hover {
     color: #2c3d50;
     text-align:center;
     margin-top: 50px;
-    font-size: 24px;
-    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
+    font-size: 27px;
 }
 
 .list-container{
-    max-width: 600px;
+    max-width: 710px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-    font-size:18px;
+    font-size:22px;
     color: #2c3d50;
 }
 .list-container i{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* ========== END we can help list ========== */
@@ -331,6 +343,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Greater than 480 px */
 @media screen and (min-width:480px){
+    
+
+   /* Form */
+    #regForm{
+        margin: 20px auto;
+    }
+  
+}
+ 
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) { 
     /* ========== START Header section ========== */ 
     .container-content{
         display: flex;
@@ -348,20 +371,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         justify-content: flex-end;
     }
    /* ========== END Header section ========== */ 
-
-   /* Form */
-    #regForm{
-        margin: 60px auto;
-    }
-  
-}
- 
-/* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) { 
     /* Form */
     #regForm {
-        margin: 80px auto;
+        margin: 30px auto;
     }
+
+    
+   
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
 
     /* help list */
     .list-container{
@@ -372,13 +392,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         padding: 10px;
     }
     #help-title{
-        font-size: 30px;
+        font-size: 35px;
     }
-   
-}
- 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
     /* ========== START of content 3 steps ========== */
     #threeSteps{
         display: flex;
@@ -434,6 +449,10 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+    /* Form Styles */
+    #regForm {
+        margin: 100px auto;
+    } 
      /* ========== START of two img and txt Sections ========== */
     #twoImg {
         display: flex;

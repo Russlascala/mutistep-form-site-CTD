@@ -14,7 +14,9 @@ function showTab(n) {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
+        document.getElementById("nextBtn").innerHTML = "Get My FREE Consultation";
+        document.getElementById("nextBtn").setAttribute(
+            "style", "font-size: 20px; padding: 8px 12px; margin-top:10px;");
     } else {
         document.getElementById("nextBtn").innerHTML = "Next";
     }
