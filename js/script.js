@@ -65,20 +65,17 @@ function validateForm() {
             valid = false;
         }
     }
-    // removes class when user clicks back on dropdown 
+    // removes class when user clicks back on dropdown
     var selectDebt = document.getElementById('select-debt');
     var selectType = document.getElementById('select-type');
     var selectStatus = document.getElementById('select-status');
     selectDebt.onclick = function () {
-        console.log("button was clicked");
         selectDebt.classList.remove('invalid', 'animated', 'shake');
     }
     selectType.onclick = function () {
-        console.log("button was clicked");
         selectType.classList.remove('invalid', 'animated', 'shake');
     }
     selectStatus.onclick = function () {
-        console.log("button was clicked");
         selectStatus.classList.remove('invalid', 'animated', 'shake');
     }
     /* Checks for select */

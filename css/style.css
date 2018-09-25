@@ -16,7 +16,7 @@ body {
 #main-header {
     padding: 0.85em 0;
 }
-#bgColor{
+.bgColor{
     background: lightgray;
     width:100%;
     
@@ -88,19 +88,17 @@ input{
     border:2px solid gray;
     font-size:18px;
     font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #aaaaaa;
 }
 
 .nextPrevBtn{
     margin-top: 15px;
 }
 
-input {
-  padding: 10px;
-  width: 100%;
-  font-size: 17px;
-  font-family: 'Roboto', sans-serif;
-  border: 1px solid #aaaaaa;
-}
 
 /* Mark input boxes that gets an error on validation: */
 input.invalid {
@@ -166,6 +164,29 @@ button:hover {
 }
 
 /* ========== END  Image and multi step Form section ========== */ 
+/* ========== START we can help list ========== */
+#help-title{
+    color: #2c3d50;
+    text-align:center;
+    margin-top: 50px;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
+}
+
+.list-container{
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    font-size:18px;
+    color: #2c3d50;
+}
+.list-container i{
+    font-size: 20px;
+}
+
+/* ========== END we can help list ========== */
 
 /* ========== START of content 3 steps ========== */
 .bgColor2{
@@ -228,6 +249,57 @@ button:hover {
     
 }
 /* ========== END of two img and txt Sections ========== */
+/* ========== START of three logos and txt Sections ========== */
+ #threeLogos{
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+/* ========== END of three logos and txt Sections ========== */
+/* ========== START of Staff Testimonials ========== */
+#staff-test-title{
+    text-transform:uppercase;
+}
+
+#three-testimonials{
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.staff-img{
+    width:200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sec-test{
+    font-size:18px;
+    /* font-weight: bold; */
+}
+
+.sec-test h3, .sec-test h4{
+    text-align: center;
+    color: lightblue;
+}
+.sec-test h3{
+    margin-bottom:0px;
+}
+.sec-test h4{
+    margin-top: 5px;
+}
+
+.sec-test p {
+    margin-left:10px;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    border:1px solid lightgray;
+
+}
+
+/* ========== End of Staff Testimonials ========== */
 /* Footer Styles */
 footer a{
     color: #2c3d50;
@@ -277,6 +349,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
    /* ========== END Header section ========== */ 
 
+   /* Form */
     #regForm{
         margin: 60px auto;
     }
@@ -285,15 +358,28 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) { 
+    /* Form */
     #regForm {
         margin: 80px auto;
     }
+
+    /* help list */
+    .list-container{
+        display: flex;  
+        justify-content: space-between;
+    }
+    .list-container td{
+        padding: 10px;
+    }
+    #help-title{
+        font-size: 30px;
+    }
+   
 }
  
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {  
     /* ========== START of content 3 steps ========== */
-
     #threeSteps{
         display: flex;
         justify-content: space-between;
@@ -314,9 +400,18 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         flex-direction: column;
         
     }
-    
     /* ========== END of two img and txt Sections ========== */
+    #threeLogos{
+        display: flex;
+        justify-content: center;
+    }
+    /* Three icons section */
+    .sec-icon{
+        flex-basis: 30%;
+        font-size:18px
+    }
     
+
 }
  
 /* Large devices (desktops, 992px and up) */
@@ -324,11 +419,18 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     /* Form Styles */
     #regForm {
         margin: 80px auto;
+    } 
+    /* Staff Testimonials */
+    #three-testimonials{
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center;  */
     }
-   
-
-    
+    .sec-test{
+        flex-basis: 27%;
+    }
 }
+
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
